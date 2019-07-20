@@ -20,6 +20,7 @@
         </activity>
         <activity android:name=".gles.DrawPoint" />
         <activity android:name=".gles.LineSegment"/>
+        <activity android:name=".gles.Trangles" />
     </application>
 
 </manifest>
