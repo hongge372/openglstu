@@ -19,6 +19,8 @@ public class LineSegment extends BackgroundRed {
 
     @Override
     public void BGDrawScence(GL10 gl){
+        //定义中一共四个点，demo传参数直接写的4，这里用count作为参数，于是神奇的一幕发生了。实际有效的点变成了3个！
+        int count = 3;
         super.BGDrawScence(gl);
         ByteBuffer vbb = ByteBuffer.allocateDirect(vertexArray.length*4);
         vbb.order(ByteOrder.nativeOrder());
@@ -41,19 +43,19 @@ public class LineSegment extends BackgroundRed {
             case 1:
             case 2:
                 gl.glColor4f(0f, 1f, 1f, 1f);
-                gl.glDrawArrays(GL10.GL_LINES, 0, 4);
+                gl.glDrawArrays(GL10.GL_LINES, 0, count);
                 break;
             case 3:
             case 4:
             case 5:
                 gl.glColor4f(0f, 1f, 0f, 1f);
-                gl.glDrawArrays(GL10.GL_LINE_STRIP, 0, 4);
+                gl.glDrawArrays(GL10.GL_LINE_STRIP, 0, count);
                 break;
             case 7:
             case 8:
             case 9:
                 gl.glColor4f(0f, 0f, 1f, 1f);
-                gl.glDrawArrays(GL10.GL_LINE_LOOP, 0, 4);
+                gl.glDrawArrays(GL10.GL_LINE_LOOP, 0, count);
                 break;
         }
         gl.glDisableClientState(GL10.GL_VERTEX_ARRAY);
