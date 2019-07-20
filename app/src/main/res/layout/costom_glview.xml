@@ -14,11 +14,11 @@
         >
 
         <!--name is for src, it's the DGLView-->
-        <triangle.opengl.wlz.stu.myapplication_1.gl.DGLView
+        <triangle.opengl.wlz.stu.myapplication_1.costomview.DGLView
             android:id="@+id/dglView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            ></triangle.opengl.wlz.stu.myapplication_1.gl.DGLView>
+            ></triangle.opengl.wlz.stu.myapplication_1.costomview.DGLView>
     </LinearLayout>
 
 

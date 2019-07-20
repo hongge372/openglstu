@@ -6,9 +6,19 @@
 
 
     <Button
-        android:id="@+id/costom_glview"
+        android:id="@+id/bt_costom_glview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="costom_glview"/>
 
+    <Button
+        android:id="@+id/bt_gl_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="gl background"/>
+    <Button
+        android:id="@+id/bt_draw_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="draw point"/>
 </LinearLayout>

@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import triangle.opengl.wlz.stu.myapplication_1.gl.CostomView;
+import triangle.opengl.wlz.stu.myapplication_1.costomview.CostomView;
+import triangle.opengl.wlz.stu.myapplication_1.gles.BackgroundRed;
+import triangle.opengl.wlz.stu.myapplication_1.gles.DrawPoint;
 
 public class MainActivity extends AppCompatActivity {
     private final String TAG = getClass().getName();
 
-    private int size = 1;
+    private int size = 3;
     Button[] button = new Button[size];
 
     @Override
@@ -28,15 +30,21 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent();
                 switch (v.getId()){
-                    case R.id.costom_glview:
+                    case R.id.bt_costom_glview:
                         intent.setClass(getApplicationContext(), CostomView.class);
                         break;
+                    case R.id.bt_gl_background:
+                        intent.setClass(getApplicationContext(), BackgroundRed.class);
+                    case R.id.bt_draw_point:
+                        intent.setClass(getApplicationContext(), DrawPoint.class);
                 }
                 startActivity(intent);
             }
         };
 
-        button[0] = (Button)findViewById(R.id.costom_glview);
+        button[0] = (Button)findViewById(R.id.bt_costom_glview);
+        button[1] = (Button)findViewById(R.id.bt_gl_background);
+        button[2] = (Button)findViewById(R.id.bt_draw_point);
         for(int i=0;i<size;i++){
             button[i].setOnClickListener(listener);
         }

@@ -1,4 +1,4 @@
-package triangle.opengl.wlz.stu.myapplication_1.gl;
+package triangle.opengl.wlz.stu.myapplication_1.costomview;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

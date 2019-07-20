@@ -1,4 +1,4 @@
-package triangle.opengl.wlz.stu.myapplication_1.gl;
+package triangle.opengl.wlz.stu.myapplication_1.costomview;
 
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
