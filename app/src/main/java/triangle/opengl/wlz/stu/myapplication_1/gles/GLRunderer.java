@@ -27,6 +27,11 @@ public abstract class GLRunderer implements GLSurfaceView.Renderer {
         GLU.gluPerspective(gl, 45.0f, (float)width/(float)height, 0.1f, 100f);
         gl.glMatrixMode(GL10.GL_MODELVIEW);
         gl.glLoadIdentity();
+
+        //3d?
+        GLU.gluPerspective(gl, 45f, (float)width/(float)height, 0.1f, 100f);
+        gl.glMatrixMode(GL10.GL_MODELVIEW);
+        gl.glLoadIdentity();
     }
 
     @Override
