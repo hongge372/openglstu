@@ -9,11 +9,12 @@ import android.widget.Button;
 import triangle.opengl.wlz.stu.myapplication_1.costomview.CostomView;
 import triangle.opengl.wlz.stu.myapplication_1.gles.BackgroundRed;
 import triangle.opengl.wlz.stu.myapplication_1.gles.DrawPoint;
+import triangle.opengl.wlz.stu.myapplication_1.gles.LineSegment;
 
 public class MainActivity extends AppCompatActivity {
     private final String TAG = getClass().getName();
 
-    private int size = 3;
+    private int size = 4;
     Button[] button = new Button[size];
 
     @Override
@@ -37,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
                         intent.setClass(getApplicationContext(), BackgroundRed.class);
                     case R.id.bt_draw_point:
                         intent.setClass(getApplicationContext(), DrawPoint.class);
+                    case R.id.bt_line_segment:
+                        intent.setClass(getApplicationContext(), LineSegment.class);
                 }
                 startActivity(intent);
             }
@@ -45,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         button[0] = (Button)findViewById(R.id.bt_costom_glview);
         button[1] = (Button)findViewById(R.id.bt_gl_background);
         button[2] = (Button)findViewById(R.id.bt_draw_point);
+        button[3] = (Button)findViewById(R.id.bt_line_segment);
         for(int i=0;i<size;i++){
             button[i].setOnClickListener(listener);
         }

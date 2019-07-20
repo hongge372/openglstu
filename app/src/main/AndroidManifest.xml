@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".gles.DrawPoint" />
+        <activity android:name=".gles.LineSegment"/>
     </application>
 
 </manifest>

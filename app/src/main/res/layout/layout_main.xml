@@ -21,4 +21,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="draw point"/>
+    <Button
+        android:id="@+id/bt_line_segment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="line segment"/>
 </LinearLayout>
