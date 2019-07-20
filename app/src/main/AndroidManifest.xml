@@ -21,6 +21,7 @@
         <activity android:name=".gles.DrawPoint" />
         <activity android:name=".gles.LineSegment"/>
         <activity android:name=".gles.Trangles" />
+        <activity android:name=".gles.Pholyhedron" />
     </application>
 
 </manifest>

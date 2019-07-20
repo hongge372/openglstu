@@ -6,16 +6,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.nio.ByteOrder;
+
 import triangle.opengl.wlz.stu.myapplication_1.costomview.CostomView;
 import triangle.opengl.wlz.stu.myapplication_1.gles.BackgroundRed;
 import triangle.opengl.wlz.stu.myapplication_1.gles.DrawPoint;
 import triangle.opengl.wlz.stu.myapplication_1.gles.LineSegment;
+import triangle.opengl.wlz.stu.myapplication_1.gles.Pholyhedron;
 import triangle.opengl.wlz.stu.myapplication_1.gles.Trangles;
 
 public class MainActivity extends AppCompatActivity {
     private final String TAG = getClass().getName();
 
-    private int size = 5;
+    private int size = 6;
     Button[] button = new Button[size];
 
     @Override
@@ -46,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.bt_trangles:
                         intent.setClass(getApplicationContext(), Trangles.class);
+                        break;
+                    case R.id.bt_pholyhedron:
+                        intent.setClass(getApplicationContext(), Pholyhedron.class);
+                        break;
                 }
                 startActivity(intent);
             }
@@ -56,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         button[2] = (Button)findViewById(R.id.bt_draw_point);
         button[3] = (Button)findViewById(R.id.bt_line_segment);
         button[4] = (Button)findViewById(R.id.bt_trangles);
+        button[5] = (Button)findViewById(R.id.bt_pholyhedron);
         for(int i=0;i<size;i++){
             button[i].setOnClickListener(listener);
         }
